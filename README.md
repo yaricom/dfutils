@@ -29,7 +29,7 @@ The left join of two data frames can be done as following:
     rightDF := qframe.ReadCSV(strings.NewReader(rightDate))
     
     colNames := map[string]string{"C": "E"}
-    joinedDF, err := LeftJoin("Category", &leftDF, &rightDF, colNames)
+    joinedDF, err := dfutils.LeftJoin("Category", &leftDF, &rightDF, colNames)
 ```
 #### Left Table
 Category(s) | Subcategory(s) |  A(i) |  B(i) |  C(i)
@@ -76,7 +76,7 @@ to keep only a few:
 	})
 
 	// invoke function
-	resDF := KeepColumns(&df, "A")
+	resDF := dfutils.KeepColumns(&df, "A")
 ```
 
 ## Credits
