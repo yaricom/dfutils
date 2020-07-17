@@ -19,7 +19,11 @@ All rows from the left data frame will remain and matched columns from the right
 The left join of two data frames can be done as following:
 
 ```go
-    import "github.com/tobgu/qframe"
+    import (
+        "github.com/tobgu/qframe"
+        "github.com/yaricom/dfutils"
+        "strings"
+    )
 
     leftDF := qframe.ReadCSV(strings.NewReader(leftData))
     rightDF := qframe.ReadCSV(strings.NewReader(rightDate))
