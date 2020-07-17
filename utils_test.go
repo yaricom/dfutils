@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func TestContainedIn(t *testing.T) {
+func TestKeepColumns(t *testing.T) {
 	df := qframe.New(map[string]types.DataSlice{
 		"A": make([]float64, 10), "B": make([]float64, 10), "C": make([]float64, 10), "D": make([]float64, 10),
 	})
