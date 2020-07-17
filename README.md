@@ -27,7 +27,7 @@ The left join of two data frames can be done as following:
     colNames := map[string]string{"C": "E"}
     joinedDF, err := LeftJoin("Category", &leftDF, &rightDF, colNames)
 ```
-####Left Table
+#### Left Table
 Category(s) | Subcategory(s) |  A(i) |  B(i) |  C(i)
 ----------- | -------------- | ----- | ----- | -----
 cat1 | sub1 | 1 | 101 | 201
@@ -40,14 +40,14 @@ cat2 | sub7 | 7 | 107 | 207
 cat2 | sub8 | 8 | 108 | 208
 cat2 | sub9 | 9 | 109 | 209
 
-####Right Table
+#### Right Table
 Category(s) | C(i)
 ----------- | -----
 cat1 | 1000
 cat2 | 2000
 cat3 | 3000
 
-####Left Join Table
+#### Join Table
 Category(s) | Subcategory(s) |  A(i) |  B(i) |  C(i) |  E(i)
 ----------- | -------------- | ----- | ----- | ----- | -----
 cat1 | sub1 | 1 | 101 | 201 | 1000
