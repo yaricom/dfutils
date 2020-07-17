@@ -64,6 +64,21 @@ cat2 | sub7 | 7 | 107 | 207 | 2000
 cat2 | sub8 | 8 | 108 | 208 | 2000
 cat2 | sub9 | 9 | 109 | 209 | 2000
 
+# Utilities
+Multiple utilities also provided.
+
+## Keep Columns
+Allows keeping only a few columns and remove other ones. It is handy when you have many columns and want
+to keep only a few:
+```go
+	df := qframe.New(map[string]types.DataSlice{
+		"A": make([]float64, 10), "B": make([]float64, 10), "C": make([]float64, 10), "D": make([]float64, 10),
+	})
+
+	// invoke function
+	resDF := KeepColumns(&df, "A")
+```
+
 ## Credits
 * The **QFrame** (*Data Frames for GO language*) created and maintained by Tobias Gustafsson, see: [QFrame][1]
 
